@@ -16,9 +16,13 @@ window.onscroll = () => {
     ? navbar.classList.add("sticky")
     : navbar.classList.remove("sticky");
 };
-
+// document.onclick = (e) => {
+//     if (!menu.classList.contains("menu-list")) {
+//       menu.classList.remove("active");
+//     }
+//   };
 document.onclick = (e) => {
-  if (!menu.classList.contains("menu-list")) {
+  if (e.target.classList !== "menu-list") {
     menu.classList.remove("active");
   }
 };
